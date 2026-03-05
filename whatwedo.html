@@ -37,107 +37,20 @@
     }
 
     /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 68px;
-      background: #0a0a0a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-
-    .nav-logo img {
-      height: 36px;
-      display: block;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      list-style: none;
-    }
-
-    .nav-links>li {
-      position: relative;
-    }
-
-    .nav-links>li>a {
-      font-family: 'Roboto', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
-      text-decoration: none;
-      padding: 8px 14px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      transition: color 0.2s;
-      white-space: nowrap;
-    }
-
-    .nav-links>li>a:hover,
-    .nav-links>li>a.active {
-      color: #fff;
-    }
-
-    .arrow {
-      font-size: 8px;
-      opacity: 0.5;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #111;
-      border: 1px solid #222;
-      min-width: 160px;
-      list-style: none;
-      padding: 8px 0;
-      z-index: 200;
-    }
-
-    .has-dropdown:hover .dropdown {
-      display: block;
-    }
-
-    .dropdown li a {
-      display: block;
-      padding: 10px 18px;
-      font-family: 'Roboto', sans-serif;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      transition: color 0.2s, background 0.2s;
-    }
-
-    .dropdown li a:hover {
-      color: #fff;
-      background: #1a1a1a;
-    }
-
-    .nav-cta {
-      padding: 9px 22px !important;
-      border: 2px solid #fff !important;
-      color: #fff !important;
-      margin-left: 8px;
-      transition: background 0.2s, color 0.2s !important;
-    }
-
-    .nav-cta:hover {
-      background: #fff !important;
-      color: #000 !important;
-    }
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;height:70px;background:rgba(0,0,0,0.96);display:flex;align-items:center;justify-content:space-between;padding:0 60px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .nav-logo img{height:38px;width:auto;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links li{position:relative;}
+    .nav-links li > a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;padding:8px 14px;display:flex;align-items:center;gap:5px;transition:color 0.2s;white-space:nowrap;}
+    .nav-links li > a:hover{color:#fff;}
+    .caret{font-size:0.55rem;opacity:0.5;transition:transform 0.2s;}
+    .nav-links li:hover .caret{transform:rotate(180deg);}
+    .dd{position:absolute;top:calc(100% + 8px);left:0;background:#0d0d0d;border:1px solid rgba(255,255,255,0.09);border-radius:3px;min-width:155px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-4px);transition:all 0.18s;box-shadow:0 8px 32px rgba(0,0,0,0.5);}
+    .nav-links li:hover .dd{opacity:1;pointer-events:all;transform:translateY(0);}
+    .dd a{display:block;padding:9px 18px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.76rem;font-weight:400;transition:all 0.15s;white-space:nowrap;}
+    .dd a:hover{color:#fff;background:rgba(255,255,255,0.04);}
+    .nav-contact{background:#fff!important;color:#000!important;padding:8px 20px!important;border-radius:3px!important;font-weight:600!important;font-size:0.75rem!important;letter-spacing:0.07em!important;transition:background 0.2s!important;}
+    .nav-contact:hover{background:#e8e8e8!important;}
 
     /* ── HERO ── */
     .hero {
@@ -232,7 +145,7 @@
     .section-header {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 40px 32px 24px;
+      padding: 0px 32px 24px;
       background: #fff;
       text-align: center;
     }
@@ -265,6 +178,11 @@
       gap: 3px;
     }
 
+    #capabilities{
+      padding-top: 60px;
+    }
+
+    
     .cap-wrap {
       max-width: 1600px;
       margin: 0 auto;
@@ -538,18 +456,18 @@
       font-size: 15px;
       font-weight: 300;
       color: rgb(214, 220, 220);
-      padding-left: 16px;
+      padding-left: 20px;
       position: relative;
       line-height: 1.5;
     }
 
     .ind-list li::before {
-      content: '·';
+      content: '→';
       position: absolute;
       left: 0;
       color: var(--accent);
-      font-size: 18px;
-      top: -3px;
+      font-size: 12px;
+      top: 2px;
     }
 
     .ind-result {
@@ -735,55 +653,67 @@
       padding: 72px 32px 40px;
       border-top: 1px solid #1a1a1a;
     }
+    .footer-logo{
+      padding-left: 8%;
+    }
 
     .footer-inner {
       max-width: 1600px;
       margin: 0 auto;
     }
 
-    .footer-offices {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      margin-bottom: 64px;
+    .footer-contact {
+      background: #000;
+      color: #fff;
+      padding: 70px 80px;
     }
 
-    .office-box {
-      background: #0d0d0d;
-      border: 1px solid #1a1a1a;
-      padding: 28px 24px;
+    .footer-contact h3 {
+      text-align: center;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
     }
 
-    .office-flag {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      display: block;
+    .contact-wrapper {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .office-country {
-      font-family: 'Poppins', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
+    .contact-box {
+      width: 23%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .office-detail {
-      font-family: 'Roboto', sans-serif;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.45);
-      line-height: 1.75;
+    .flag-wrap {
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
     }
 
-    .office-detail a {
-      color: inherit;
-      text-decoration: none;
+    .flag {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: inline-block;
     }
 
-    .office-detail a:hover {
-      color: var(--accent);
+    #uae {
+      object-fit: contain;
+    }
+
+    .contact-box p {
+      line-height: 1.7;
+      font-size: 15px;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .contact-box a {
+      color: #fff;
+      text-decoration: underline;
     }
 
     .footer-grid {
@@ -1037,29 +967,19 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#"><img src="./Whatwedo/aerospace.png" alt="Proliant Data" /></a>
-    <ul class="nav-links">
-      <li><a href="#">HOME</a></li>
-      <li class="has-dropdown">
-        <a href="#">WHO WE ARE <span class="arrow">▼</span></a>
-        <ul class="dropdown">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Leaders</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#" class="active">WHAT WE DO <span class="arrow">▼</span></a>
-        <ul class="dropdown">
-          <li><a href="#capabilities">Capabilities</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#technologies">Technologies</a></li>
-        </ul>
-      </li>
-      <li><a href="#">CAREERS</a></li>
-      <li><a href="#contact" class="nav-cta">CONTACT</a></li>
-    </ul>
-  </nav>
+  <a href="#" class="nav-logo"><img src="./Whatwedo/image (3).png" alt="Proliant Data Logo" /></a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Who We Are <span class="caret">▼</span></a>
+      <div class="dd"><a href="#">About</a><a href="#">Leaders</a><a href="#">Contact Us</a></div>
+    </li>
+    <li><a href="#">What We Do <span class="caret">▼</span></a>
+      <div class="dd"><a href="#">Capabilities</a><a href="#">Industries</a><a href="#">Technologies</a></div>
+    </li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#cta" class="nav-contact">Contact</a></li>
+  </ul>
+</nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -1210,9 +1130,8 @@
               <li>Automated high-volume validation reports using Power BI</li>
               <li>Implemented configurable ETL and proprietary validation tools</li>
               <li>Deployed real-time yield dashboards for migration tracking</li>
+              <li><strong>Result:</strong> Seamless deployment, faster validation cycles, early data issue detection, real-time compliance visibility, and substantial cost savings.</li>
             </ul>
-            <div class="ind-result"><strong>Result:</strong> Seamless deployment, faster validation cycles, early data
-              issue detection, real-time compliance visibility, and substantial cost savings.</div>
           </div>
         </div>
 
@@ -1228,9 +1147,8 @@
               <li>Needed to reduce cutover time without data loss</li>
               <li>Delivered optimized ETL pipelines and real-time dashboards</li>
               <li>Integrated billing systems with high data integrity standards</li>
+              <li><strong>Result:</strong> Cutover reduced to 4 days, integrated billing, and high data integrity.</li>
             </ul>
-            <div class="ind-result"><strong>Result:</strong> Cutover reduced to 4 days, integrated billing, and high
-              data integrity.</div>
           </div>
         </div>
 
@@ -1245,9 +1163,8 @@
               <li>Legacy procurement and inventory data caused financial discrepancies</li>
               <li>SAP configuration misaligned with business processes</li>
               <li>Built custom SAP solutions and accelerated value mapping</li>
+              <li><strong>Result:</strong> Accurate inventory reconciliation, improved financial reporting, and better decision-making.</li>
             </ul>
-            <div class="ind-result"><strong>Result:</strong> Accurate inventory reconciliation, improved financial
-              reporting, and better decision-making.</div>
           </div>
         </div>
 
@@ -1262,9 +1179,8 @@
               <li>Unstructured legacy billing data and complex order-to-cash workflows</li>
               <li>Required SAP S/4HANA-ready data transformation</li>
               <li>Applied custom ETL and relevancy-based data mapping</li>
+              <li><strong>Result:</strong> SAP-ready data, streamlined operations, and auditable financial records.</li>
             </ul>
-            <div class="ind-result"><strong>Result:</strong> SAP-ready data, streamlined operations, and auditable
-              financial records.</div>
           </div>
         </div>
 
@@ -1402,8 +1318,8 @@
   <footer id="contact">
     <div class="footer-inner">
       <div class="footer-grid">
-        <div>
-          <a class="footer-logo" href="#">Proliant Data</a>
+        <div class="footer-logo">
+            <a href="#" class="nav-logo"><img src="./Whatwedo/image (3).png" alt="Proliant Data Logo" /></a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Company</div>
@@ -1428,28 +1344,57 @@
           </ul>
         </div>
       </div>
-      <div class="footer-offices">
-        <div class="office-box reveal"><span class="office-flag">🇺🇸</span>
-          <div class="office-country">USA</div>
-          <div class="office-detail">Proliant Data LLC<br>75 State Street, Boston, MA 01803<br><a
-              href="tel:+16179552070">+1-617-955-2070</a><br><a href="/cdn-cgi/l/email-protection#036a6d656c4373716c6f6a626d77676277626f6f602d606c6e"><span class="__cf_email__" data-cfemail="f69f989099b68684999a9f979882929782979a9a95d895999b">[email&#160;protected]</span></a></div>
+      <hr style="border: none; border-top: 1px solid #1a1a1a; margin: 0;" />
+      <section class="footer-contact">
+        <h3>CONTACT</h3>
+        <div class="contact-wrapper">
+
+          <div class="contact-box">
+            <div class="flag-wrap"><img src="./Whatwedo/usa.webp" class="flag"></div>
+            <p>
+              Proliant Data LLC, USA<br>
+              75 State Street, Boston,<br>
+              MA 01803<br>
+              Phone: +1-617-955-2070<br>
+              Email: <a href="#"><span class="__cf_email__" data-cfemail="d2baa092a2a0bdbebbb3bca6b6b3a6b3bebeb1fcb1bdbf">[email&#160;protected]</span></a>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <div class="flag-wrap"><img src="./Whatwedo/germany.webp" class="flag"></div>
+            <p>
+              Proliant Data GmbH, Germany<br>
+              W&#252;rzburger Ring 39,<br>
+              Erlangen, 91056<br>
+              Phone: +49-15158005363<br>
+              Email: <a href="#"><span class="__cf_email__" data-cfemail="79110b39090b16151018170d1d180d1815151a571a1614">[email&#160;protected]</span></a>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <div class="flag-wrap"><img src="./Whatwedo/india.webp" class="flag" style="margin-right: 45px;"></div>
+            <p>
+              Proliant Data Pvt. Ltd., INDIA<br>
+              Pranava Vaishnoi Business Park,<br>
+              Kothaguda, Telangana, India<br>
+              Phone: +91 8008199903<br>
+              Email: <a href="#"><span class="__cf_email__" data-cfemail="630b112313110c0f0a020d17070217020f0f004d000c0e">[email&#160;protected]</span></a>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <div class="flag-wrap"><img src="./Whatwedo/uae.webp" class="flag" id="uae" style="margin-right: 45px;"></div>
+            <p>
+              Proliant Data FZCO, UAE<br>
+              IFZA Business Park,<br>
+              Dubai, United Arab Emirates<br>
+              Phone: +971 505 185363<br>
+              Email: <a href="#"><span class="__cf_email__" data-cfemail="f29a80b282809d9e9b939c86969386939e9e91dc919d9f">[email&#160;protected]</span></a>
+            </p>
+          </div>
+
         </div>
-        <div class="office-box reveal d1"><span class="office-flag">🇩🇪</span>
-          <div class="office-country">Germany</div>
-          <div class="office-detail">Proliant Data GmbH<br>Würzburger Ring 39, Erlangen 91056<br><a
-              href="tel:+4915158005363">+49-15158005363</a><br><a href="/cdn-cgi/l/email-protection#3d54535b527d4d4f5251545c5349595c495c51515e135e5250"><span class="__cf_email__" data-cfemail="ddb4b3bbb29dadafb2b1b4bcb3a9b9bca9bcb1b1bef3beb2b0">[email&#160;protected]</span></a></div>
-        </div>
-        <div class="office-box reveal d2"><span class="office-flag">🇮🇳</span>
-          <div class="office-country">India</div>
-          <div class="office-detail">Roliant Data Pvt. Ltd.<br>Pranava Vaishnoi Business Park,<br>Kothaguda,
-            Telangana<br><a href="tel:+918008199903">+91 8008199903</a><br><a href="/cdn-cgi/l/email-protection#7d14131b123d0d0f1211141c1309191c091c11111e531e1210"><span class="__cf_email__" data-cfemail="274e494148675755484b4e464953434653464b4b440944484a">[email&#160;protected]</span></a></div>
-        </div>
-        <div class="office-box reveal d3"><span class="office-flag">🇦🇪</span>
-          <div class="office-country">UAE</div>
-          <div class="office-detail">Proliant Data FZCO<br>IFZA Business Park, Dubai<br><a href="tel:+971505185363">+971
-              505 185363</a><br><a href="/cdn-cgi/l/email-protection#2a43444c456a5a584546434b445e4e4b5e4b46464904494547"><span class="__cf_email__" data-cfemail="8ae3e4ece5cafaf8e5e6e3ebe4feeeebfeebe6e6e9a4e9e5e7">[email&#160;protected]</span></a></div>
-        </div>
-      </div>
+      </section>
       <div class="footer-copy">
         <span>© 2024 Proliant Data LLC. All rights reserved.</span>
         <div><a href="#">Terms</a><a href="#">Privacy</a><a href="https://linkedin.com/company/proliant-data"
@@ -1458,7 +1403,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Scroll reveal
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => {
